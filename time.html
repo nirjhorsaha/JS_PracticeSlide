@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>Time Page</h1>
+    <script>
+        now = new Date();
+        document.write(now);
+        time = "AM";
+        hours = now.getHours();
+        if (hours > 12) {
+            hours -= 12;
+            time = "PM";
+        } else if (hours == 0) {
+            hours = 12;
+        }
+        document.write( 
+            "<p>" + "Present Time: " 
+                + hours + " : " 
+                + now.getMinutes() + " : " 
+                + now.getSeconds() + " : " 
+                + time + "<p>"
+        );
+    </script>
+</body>
+
+</html>

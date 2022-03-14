@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <h1>Prime Num Check</h1>
+  <script>
+    function isPrime(n) {
+      if (n < 2) {
+        return false;
+      } else if (n == 2) {
+        return true;
+      } else {
+        for (var i = 2; i <= n / 2; i++) {
+          if (n % i == 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+    }
+  </script>
+
+  <body style="text-align: center">
+    <script>
+      num = parseFloat(prompt("enter a positive num"));
+      if (isPrime(num)) {
+        document.write("<h3>" + num + "<b> is <b> a prime number" + "</h3>");
+      } else {
+        document.write("<h3>" + num + "<b> is not <b> a prime number" + "</h3>");
+      }
+      //
+    </script>
+  </body>
+</html>
